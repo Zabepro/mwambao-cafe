@@ -65,7 +65,230 @@
       </div>
     </section>
 
-    <!-- Menu, About, Reviews and Contact sections go here in next steps -->
+    <!-- Sehemu ya Menyu (Menu Section) -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <!-- Kichwa cha sehemu ya menyu -->
+        <header class="section-header">
+          <p class="section-eyebrow" data-i18n="menu.eyebrow">Menyu Yetu</p>
+          <h2 class="section-title" id="menu-title" data-i18n="menu.title">Ladha za Pwani, Zilizopikwa Upya</h2>
+          <p class="section-text" data-i18n="menu.intro">Kutoka kahawa ya Kilimanjaro hadi pilau ya nyama, kila kitu kinapikwa upya. Chagua unachopenda, ongeza kwenye oda, kisha utume kwa WhatsApp.</p>
+        </header>
+
+        <!-- Vitufe vya kuchuja vyakula na vinywaji -->
+        <div class="menu-filter" role="group" aria-label="Chuja menyu kwa kundi" data-i18n-aria="menu.filter_aria">
+          <button class="menu-filter__btn is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="menu.filter.all">Zote</button>
+          <button class="menu-filter__btn" type="button" data-filter="drinks" aria-pressed="false" data-i18n="menu.filter.drinks">Kahawa na Vinywaji</button>
+          <button class="menu-filter__btn" type="button" data-filter="breakfast" aria-pressed="false" data-i18n="menu.filter.breakfast">Kifungua Kinywa</button>
+          <button class="menu-filter__btn" type="button" data-filter="mains" aria-pressed="false" data-i18n="menu.filter.mains">Chakula Kikuu</button>
+          <button class="menu-filter__btn" type="button" data-filter="desserts" aria-pressed="false" data-i18n="menu.filter.desserts">Vitamu</button>
+        </div>
+        <p class="visually-hidden" id="menu-status" role="status" aria-live="polite"></p>
+
+        <!-- Gridi ya vyakula na vinywaji (Cards 16) -->
+        <div class="menu-grid" id="menu-grid">
+          <!-- Kadi 1: Espresso -->
+          <article class="menu-card" data-id="espresso" data-category="drinks" data-price="4000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-espresso" data-i18n="menu.espresso.name">Espresso ya Kilimanjaro</h3>
+              <p class="menu-card__desc" data-i18n="menu.espresso.desc">Maharage ya Arabica ya Kilimanjaro, yaliyokaangwa na kusagwa upya.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="4000">4,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-espresso" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 2: Cappuccino -->
+          <article class="menu-card" data-id="cappuccino" data-category="drinks" data-price="6000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-cappuccino" data-i18n="menu.cappuccino.name">Cappuccino</h3>
+              <p class="menu-card__desc" data-i18n="menu.cappuccino.desc">Espresso na maziwa ya moto yenye povu laini, na mdalasini kidogo juu.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="6000">6,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-cappuccino" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 3: Chai ya Masala (Maarufu) -->
+          <article class="menu-card" data-id="chai-masala" data-category="drinks" data-price="3500">
+            <span class="menu-card__badge" data-i18n="menu.badge_popular">Maarufu</span>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-chai-masala" data-i18n="menu.chai_masala.name">Chai ya Masala</h3>
+              <p class="menu-card__desc" data-i18n="menu.chai_masala.desc">Chai ya maziwa iliyochemshwa na tangawizi, iliki na mdalasini.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="3500">3,500</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-chai-masala" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 4: Maji ya Nazi -->
+          <article class="menu-card" data-id="maji-ya-nazi" data-category="drinks" data-price="4000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-maji-ya-nazi" data-i18n="menu.maji_ya_nazi.name">Maji ya Nazi</h3>
+              <p class="menu-card__desc" data-i18n="menu.maji_ya_nazi.desc">Maji ya nazi mbichi na baridi, moja kwa moja kutoka kwenye nazi.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="4000">4,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-maji-ya-nazi" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 5: Mandazi na Chai (Maarufu) -->
+          <article class="menu-card" data-id="mandazi-chai" data-category="breakfast" data-price="4500">
+            <span class="menu-card__badge" data-i18n="menu.badge_popular">Maarufu</span>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-mandazi-chai" data-i18n="menu.mandazi_chai.name">Mandazi na Chai</h3>
+              <p class="menu-card__desc" data-i18n="menu.mandazi_chai.desc">Mandazi matatu laini ya nazi na iliki, pamoja na kikombe cha chai.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="4500">4,500</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-mandazi-chai" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 6: Chapati na Maharage -->
+          <article class="menu-card" data-id="chapati-maharage" data-category="breakfast" data-price="5000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-chapati-maharage" data-i18n="menu.chapati_maharage.name">Chapati na Maharage</h3>
+              <p class="menu-card__desc" data-i18n="menu.chapati_maharage.desc">Chapati mbili laini na maharage ya nazi yaliyopikwa taratibu.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="5000">5,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-chapati-maharage" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 7: Vitumbua -->
+          <article class="menu-card" data-id="vitumbua" data-category="breakfast" data-price="3000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-vitumbua" data-i18n="menu.vitumbua.name">Vitumbua</h3>
+              <p class="menu-card__desc" data-i18n="menu.vitumbua.desc">Vitumbua vitano vya moto vya wali na nazi, vyenye rangi ya dhahabu.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="3000">3,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-vitumbua" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 8: Sambusa za Nyama -->
+          <article class="menu-card" data-id="sambusa" data-category="breakfast" data-price="4000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-sambusa" data-i18n="menu.sambusa.name">Sambusa za Nyama</h3>
+              <p class="menu-card__desc" data-i18n="menu.sambusa.desc">Sambusa tatu za nyama ya ng'ombe na viungo, zilizokaangwa zikiwa moto.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="4000">4,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-sambusa" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 9: Pilau ya Nyama (Maarufu) -->
+          <article class="menu-card" data-id="pilau" data-category="mains" data-price="12000">
+            <span class="menu-card__badge" data-i18n="menu.badge_popular">Maarufu</span>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-pilau" data-i18n="menu.pilau.name">Pilau ya Nyama</h3>
+              <p class="menu-card__desc" data-i18n="menu.pilau.desc">Wali wa pilau wenye nyama ya ng'ombe na viungo vya pwani, pamoja na kachumbari.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="12000">12,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-pilau" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 10: Samaki wa Kupaka na Wali -->
+          <article class="menu-card" data-id="samaki-wa-kupaka" data-category="mains" data-price="16000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-samaki-wa-kupaka" data-i18n="menu.samaki_wa_kupaka.name">Samaki wa Kupaka na Wali</h3>
+              <p class="menu-card__desc" data-i18n="menu.samaki_wa_kupaka.desc">Samaki wa kuchoma katika mchuzi wa nazi na viungo, pamoja na wali mweupe.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="16000">16,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-samaki-wa-kupaka" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 11: Chipsi Mayai -->
+          <article class="menu-card" data-id="chipsi-mayai" data-category="mains" data-price="6000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-chipsi-mayai" data-i18n="menu.chipsi_mayai.name">Chipsi Mayai</h3>
+              <p class="menu-card__desc" data-i18n="menu.chipsi_mayai.desc">Chipsi za moto zilizochanganywa na mayai, pamoja na kachumbari na pilipili.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="6000">6,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-chipsi-mayai" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 12: Mishkaki na Kachumbari -->
+          <article class="menu-card" data-id="mishkaki" data-category="mains" data-price="9000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-mishkaki" data-i18n="menu.mishkaki.name">Mishkaki na Kachumbari</h3>
+              <p class="menu-card__desc" data-i18n="menu.mishkaki.desc">Vipande vya nyama vilivyochomwa kwenye mkaa, pamoja na kachumbari.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="9000">9,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-mishkaki" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 13: Halwa ya Pwani -->
+          <article class="menu-card" data-id="halwa" data-category="desserts" data-price="3000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-halwa" data-i18n="menu.halwa.name">Halwa ya Pwani</h3>
+              <p class="menu-card__desc" data-i18n="menu.halwa.desc">Halwa laini ya pwani yenye iliki, kwa vipande vinne.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="3000">3,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-halwa" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 14: Kashata za Karanga -->
+          <article class="menu-card" data-id="kashata" data-category="desserts" data-price="2000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-kashata" data-i18n="menu.kashata.name">Kashata za Karanga</h3>
+              <p class="menu-card__desc" data-i18n="menu.kashata.desc">Kashata tamu za karanga zilizopikwa kwenye sukari, vipande sita.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="2000">2,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-kashata" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 15: Kaimati -->
+          <article class="menu-card" data-id="kaimati" data-category="desserts" data-price="3000">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-kaimati" data-i18n="menu.kaimati.name">Kaimati</h3>
+              <p class="menu-card__desc" data-i18n="menu.kaimati.desc">Mipira midogo ya unga iliyokaangwa na kulowekwa kwenye sharubati ya iliki.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="3000">3,000</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-kaimati" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+
+          <!-- Kadi 16: Keki ya Nazi -->
+          <article class="menu-card" data-id="keki-ya-nazi" data-category="desserts" data-price="4500">
+            <div class="menu-card__body">
+              <h3 class="menu-card__name" id="item-keki-ya-nazi" data-i18n="menu.keki_ya_nazi.name">Keki ya Nazi</h3>
+              <p class="menu-card__desc" data-i18n="menu.keki_ya_nazi.desc">Kipande cha keki laini ya nazi na iliki, chenye nazi iliyokunwa juu.</p>
+            </div>
+            <div class="menu-card__footer">
+              <p class="menu-card__price"><span class="menu-card__currency">TZS</span> <data value="4500">4,500</data></p>
+              <button class="btn btn-primary menu-card__add" type="button" aria-describedby="item-keki-ya-nazi" data-i18n="menu.add">Ongeza</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ujumbe wa taarifa ya bei za vyakula -->
+        <p class="menu-note" data-i18n="menu.note">Bei zote ni kwa Shilingi za Tanzania (TZS). Ongeza vyakula kwenye oda yako, kisha uitume kwa WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- Cart, About, Reviews and Contact sections go here in next steps -->
   </main>
 </body>
 </html>
