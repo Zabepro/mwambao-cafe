@@ -72,7 +72,7 @@
         <header class="section-header">
           <p class="section-eyebrow" data-i18n="menu.eyebrow">Menyu Yetu</p>
           <h2 class="section-title" id="menu-title" data-i18n="menu.title">Ladha za Pwani, Zilizopikwa Upya</h2>
-          <p class="section-text" data-i18n="menu.intro">Kutoka kahawa ya Kilimanjaro hadi pilau ya nyama, kila kitu kinapikwa upya. Chagua unachopenda, ongeza kwenye oda, kisha utume kwa WhatsApp.</p>
+          <p class="section-text" data-i18n="menu.intro">Kutoka kahawa ya Kilimanjaro hadi pilau ya nyama, kila kitu kinapikwa upya. Chagua unachopenda.</p>
         </header>
 
         <!-- Vitufe vya kuchuja vyakula na vinywaji -->
@@ -288,7 +288,73 @@
       </div>
     </section>
 
-    <!-- Cart, About, Reviews and Contact sections go here in next steps -->
+    <!-- About, Reviews and Contact sections go here in next steps -->
   </main>
+
+  <!-- Footer goes here in a next step -->
+
+  <!-- Kitufe cha oda kinachoelea -->
+  <button class="cart-fab" type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart">
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span class="cart-fab__label" data-i18n="cart.open">Oda yako</span>
+    <span class="cart-fab__count" id="cart-count">0</span>
+  </button>
+  <p class="visually-hidden" id="cart-status" role="status" aria-live="polite"></p>
+
+  <!-- Panel ya oda -->
+  <dialog class="cart" id="cart" aria-labelledby="cart-title">
+    <div class="cart__panel">
+      <header class="cart__header">
+        <h2 class="cart__title" id="cart-title" data-i18n="cart.title">Oda Yako</h2>
+        <button class="cart__close" type="button" id="cart-close" aria-label="Funga oda" data-i18n-aria="cart.close">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </header>
+
+      <div class="cart__body">
+        <p class="cart__empty" id="cart-empty" data-i18n="cart.empty">Oda yako ni tupu. Ongeza vyakula kutoka kwenye menyu.</p>
+        <ul class="cart__items" id="cart-items" aria-label="Vitu kwenye oda yako" data-i18n-aria="cart.items_aria"></ul>
+      </div>
+
+      <footer class="cart__footer">
+        <p class="cart__total-row"><span class="cart__total-label" data-i18n="cart.total">Jumla</span> <strong class="cart__total"><span class="cart__currency">TZS</span> <span id="cart-total">0</span></strong></p>
+
+        <div class="form-field">
+          <label for="order-name" data-i18n="cart.name_label">Jina lako (si lazima)</label>
+          <input class="form-input" type="text" id="order-name" name="name" autocomplete="name" placeholder="Mfano: Amina" data-i18n-placeholder="cart.name_placeholder">
+        </div>
+        <div class="form-field">
+          <label for="order-note" data-i18n="cart.note_label">Maelezo ya ziada (si lazima)</label>
+          <textarea class="form-input" id="order-note" name="note" rows="3" placeholder="Mfano: Chai bila sukari" data-i18n-placeholder="cart.note_placeholder"></textarea>
+        </div>
+
+        <button class="btn btn-primary cart__send" type="button" id="cart-send" disabled data-i18n="cart.send">Tuma Oda kwa WhatsApp</button>
+        <button class="btn btn-secondary cart__clear" type="button" id="cart-clear" disabled data-i18n="cart.clear">Futa Oda</button>
+        <p class="cart__hint" data-i18n="cart.hint">WhatsApp itafunguka ikiwa na oda yako tayari. Bonyeza Tuma ndani ya WhatsApp ili kuthibitisha.</p>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Kiolezo cha kipengele kimoja cha oda (JavaScript itakinakili) -->
+  <template id="cart-item-template">
+    <li class="cart-item">
+      <div class="cart-item__info">
+        <p class="cart-item__name"></p>
+        <p class="cart-item__price"><span class="cart-item__currency">TZS</span> <span class="cart-item__amount"></span></p>
+      </div>
+      <div class="cart-item__qty" role="group" aria-label="Idadi" data-i18n-aria="cart.qty_aria">
+        <button class="qty-btn" type="button" data-action="decrease" aria-label="Punguza" data-i18n-aria="cart.decrease">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg>
+        </button>
+        <span class="cart-item__count">1</span>
+        <button class="qty-btn" type="button" data-action="increase" aria-label="Ongeza" data-i18n-aria="cart.increase">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+        </button>
+      </div>
+      <button class="cart-item__remove" type="button" data-action="remove" aria-label="Ondoa" data-i18n-aria="cart.remove">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+      </button>
+    </li>
+  </template>
 </body>
 </html>
