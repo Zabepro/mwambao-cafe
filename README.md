@@ -36,5 +36,8 @@ You can run this project locally without any installation or build steps:
    - Right-click on `index.html` and select **"Open with Live Server"** (or click "Go Live" in the bottom status bar).
    - The site will open automatically at `http://127.0.0.1:5500/`.
 
+## Image credits
+- **Hero image**: Photo by [Matthis Volquardsen](https://www.pexels.com/photo/a-cup-of-cappuccino-on-a-table-14137302/) on Pexels ([Pexels License](https://www.pexels.com/license/)).
+
 ---
 Prepared by Zabepro
