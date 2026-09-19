@@ -288,7 +288,114 @@
       </div>
     </section>
 
-    <!-- About, Reviews and Contact sections go here in next steps -->
+    <!-- Sehemu ya Kuhusu Sisi (About Section) -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__content">
+          <p class="section-eyebrow" data-i18n="about.eyebrow">Kuhusu Sisi</p>
+          <h2 class="section-title" id="about-title" data-i18n="about.title">Hadithi ya Mwambao</h2>
+          <p class="section-text" data-i18n="about.p1">Neno "mwambao" linamaanisha pwani. Mwambao Café ilianza na wazo dogo: kikombe cha chai ya masala kinachokufanya ujisikie nyumbani, hata ukiwa mbali na bahari.</p>
+          <p class="section-text" data-i18n="about.p2">Kila siku tunapika kwa viungo vya pwani, yaani iliki, mdalasini, tangawizi na nazi, na tunatumia kahawa ya Arabica kutoka Kilimanjaro. Chakula kizuri kinaanza na viungo vibichi na mikono yenye upendo.</p>
+        </div>
+        <ul class="about__values">
+          <li class="about__value">
+            <h3 class="about__value-title" data-i18n="about.v1.title">Kahawa ya Kilimanjaro</h3>
+            <p class="about__value-text" data-i18n="about.v1.text">Maharage ya Arabica yanayokaangwa na kusagwa upya kila siku.</p>
+          </li>
+          <li class="about__value">
+            <h3 class="about__value-title" data-i18n="about.v2.title">Viungo vya Pwani</h3>
+            <p class="about__value-text" data-i18n="about.v2.text">Iliki, mdalasini, tangawizi na nazi katika kila mapishi.</p>
+          </li>
+          <li class="about__value">
+            <h3 class="about__value-title" data-i18n="about.v3.title">Upya Kila Siku</h3>
+            <p class="about__value-text" data-i18n="about.v3.text">Tunapika kwa idadi ndogo, ili kila kitu kifike kikiwa moto na kibichi.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sehemu ya Maoni ya Wateja (Reviews Section) -->
+    <!-- Maoni haya ni ya mfano. Kwa biashara halisi, tumia maoni halisi ya wateja. -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <!-- Aikoni ya nyota, itatumika mara 15 kupitia <use> -->
+      <svg class="svg-sprite" width="0" height="0" aria-hidden="true" focusable="false">
+        <symbol id="icon-star" viewBox="0 0 24 24">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </symbol>
+      </svg>
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow" data-i18n="reviews.eyebrow">Maoni ya Wateja</p>
+          <h2 class="section-title" id="reviews-title" data-i18n="reviews.title">Wateja Wetu Wanasemaje</h2>
+        </header>
+        <div class="reviews-grid">
+          <!-- Maoni 1: Amina J. -->
+          <figure class="review-card">
+            <p class="review-card__rating" role="img" aria-label="Nyota 5 kati ya 5" data-i18n-aria="reviews.stars_aria">
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+            </p>
+            <blockquote class="review-card__quote">
+              <p data-i18n="reviews.r1.text">Chai ya masala yao ni bora kuliko zote nilizowahi kunywa Dar. Mandazi yanafika yakiwa moto na laini kabisa.</p>
+            </blockquote>
+            <figcaption class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">A</span>
+              <span class="review-card__meta">
+                <span class="review-card__name">Amina J.</span>
+                <span class="review-card__role" data-i18n="reviews.r1.role">Mteja wa kila wiki</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <!-- Maoni 2: Baraka M. -->
+          <figure class="review-card">
+            <p class="review-card__rating" role="img" aria-label="Nyota 5 kati ya 5" data-i18n-aria="reviews.stars_aria">
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+            </p>
+            <blockquote class="review-card__quote">
+              <p data-i18n="reviews.r2.text">Niliagiza pilau kwa WhatsApp na ilikuwa tayari baada ya dakika chache. Huduma ni ya haraka na chakula ni kitamu.</p>
+            </blockquote>
+            <figcaption class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">B</span>
+              <span class="review-card__meta">
+                <span class="review-card__name">Baraka M.</span>
+                <span class="review-card__role" data-i18n="reviews.r2.role">Mteja wa mchana</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <!-- Maoni 3: Neema K. -->
+          <figure class="review-card">
+            <p class="review-card__rating" role="img" aria-label="Nyota 5 kati ya 5" data-i18n-aria="reviews.stars_aria">
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+              <svg class="icon icon-star" width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-star"></use></svg>
+            </p>
+            <blockquote class="review-card__quote">
+              <p data-i18n="reviews.r3.text">Samaki wa kupaka na wali ni wa kipekee. Ninapenda jinsi mazingira yanavyokumbusha pwani.</p>
+            </blockquote>
+            <figcaption class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">N</span>
+              <span class="review-card__meta">
+                <span class="review-card__name">Neema K.</span>
+                <span class="review-card__role" data-i18n="reviews.r3.role">Mgeni wa wikendi</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section goes here in a next step -->
   </main>
 
   <!-- Footer goes here in a next step -->
