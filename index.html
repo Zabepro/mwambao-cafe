@@ -10,6 +10,51 @@
   <script src="js/cart.js" defer></script>
 </head>
 <body>
-  <!-- Sections will be added in Phase 2 -->
+  <!-- Kiungo cha kuruka moja kwa moja kwenye maudhui makuu (Accessibility) -->
+  <a class="skip-link" href="#main">Ruka kwenda kwenye maudhui</a>
+
+  <!-- Sehemu ya kichwa cha tovuti na menyu ya urambazaji -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Menyu kuu">
+      <a class="logo" href="#home">Mwambao <span>Café</span></a>
+
+      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Fungua menyu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#menu">Menyu</a></li>
+        <li><a href="#about">Kuhusu Sisi</a></li>
+        <li><a href="#reviews">Maoni</a></li>
+        <li><a href="#contact">Wasiliana</a></li>
+      </ul>
+
+      <a class="btn btn-primary nav-order" href="https://wa.me/255700000000?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer">Agiza</a>
+    </nav>
+  </header>
+
+  <!-- Maudhui makuu ya ukurasa -->
+  <main id="main">
+    <!-- Sehemu ya ufunguzi na utambulisho (Hero Section) -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Dar es Salaam · Pwani</p>
+        <h1 class="hero__title">Ladha ya Pwani, Kikombe Kimoja Kwa Wakati</h1>
+        <p class="hero__text">Kahawa iliyopikwa kwa upendo, chai ya masala, kifungua kinywa cha Kiswahili na vitamu vya kila siku, kando ya bahari ya Hindi.</p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#menu">Tazama Menyu</a>
+          <a class="btn btn-secondary" href="https://wa.me/255700000000?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer">Agiza kwa WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <img src="images/hero.jpg" alt="Kikombe cha kahawa na chai ya masala mezani kando ya dirisha la pwani" width="800" height="600" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- Menu, About, Reviews and Contact sections go here in next steps -->
+  </main>
 </body>
 </html>
