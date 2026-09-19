@@ -395,10 +395,103 @@
       </div>
     </section>
 
-    <!-- Contact section goes here in a next step -->
+    <!-- Sehemu ya Wasiliana Nasi (Contact Section) -->
+    <!-- Anwani, masaa na ramani ni za mfano. Kwa biashara halisi, weka taarifa halisi. -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <!-- Kichwa cha sehemu ya mawasiliano -->
+        <header class="section-header">
+          <p class="section-eyebrow" data-i18n="contact.eyebrow">Wasiliana Nasi</p>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">Karibu Mwambao</h2>
+          <p class="section-text" data-i18n="contact.intro">Tembelea café yetu, piga simu au tuandikie. Tutakujibu haraka.</p>
+        </header>
+
+        <div class="contact__grid">
+          <!-- Taarifa za mawasiliano na masaa ya kazi -->
+          <div class="contact__info">
+            <div class="contact__block">
+              <h3 class="contact__block-title" data-i18n="contact.address_title">Anwani</h3>
+              <address class="contact__address" data-i18n="contact.address_text">Ufukweni, Msasani, Dar es Salaam, Tanzania</address>
+            </div>
+            <div class="contact__block">
+              <h3 class="contact__block-title" data-i18n="contact.hours_title">Masaa ya Kazi</h3>
+              <dl class="contact__hours">
+                <div class="contact__hours-row">
+                  <dt data-i18n="contact.hours_weekdays">Jumatatu – Ijumaa</dt>
+                  <dd data-i18n="contact.hours_weekdays_time">6:30 asubuhi – 9:00 usiku</dd>
+                </div>
+                <div class="contact__hours-row">
+                  <dt data-i18n="contact.hours_weekend">Jumamosi – Jumapili</dt>
+                  <dd data-i18n="contact.hours_weekend_time">7:00 asubuhi – 10:00 usiku</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contact__block">
+              <h3 class="contact__block-title" data-i18n="contact.phone_title">Simu na WhatsApp</h3>
+              <p class="contact__phone"><a class="contact__link" href="tel:+255624964064">+255 624 964 064</a></p>
+              <a class="btn btn-secondary contact__whatsapp" href="https://wa.me/255624964064?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nina%20swali." target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp" data-i18n-wa="wa.question">Piga Gumzo kwa WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Fomu ya kuandika ujumbe -->
+          <form class="contact-form" id="contact-form" novalidate aria-labelledby="contact-form-title">
+            <h3 class="contact-form__title" id="contact-form-title" data-i18n="contact.form_title">Tuandikie Ujumbe</h3>
+            <div class="form-field">
+              <label for="contact-name" data-i18n="contact.name_label">Jina lako</label>
+              <input class="form-input" type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Mfano: Amina" data-i18n-placeholder="contact.name_placeholder">
+              <p class="form-error" id="contact-name-error" hidden data-i18n="contact.name_error">Tafadhali andika jina lako.</p>
+            </div>
+            <div class="form-field">
+              <label for="contact-phone" data-i18n="contact.phone_label">Namba ya simu (si lazima)</label>
+              <input class="form-input" type="tel" id="contact-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="Mfano: 0712 345 678" data-i18n-placeholder="contact.phone_placeholder">
+              <p class="form-error" id="contact-phone-error" hidden data-i18n="contact.phone_error">Namba ya simu si sahihi. Mfano: 0712 345 678.</p>
+            </div>
+            <div class="form-field">
+              <label for="contact-message" data-i18n="contact.message_label">Ujumbe wako</label>
+              <textarea class="form-input" id="contact-message" name="message" rows="5" required placeholder="Andika ujumbe wako hapa" data-i18n-placeholder="contact.message_placeholder"></textarea>
+              <p class="form-error" id="contact-message-error" hidden data-i18n="contact.message_error">Tafadhali andika ujumbe wako.</p>
+            </div>
+            <button class="btn btn-primary contact-form__submit" type="submit" data-i18n="contact.submit">Tuma kwa WhatsApp</button>
+            <p class="contact-form__hint" data-i18n="contact.form_hint">Ujumbe wako utafunguka ndani ya WhatsApp, tayari kutumwa.</p>
+            <p class="visually-hidden" id="contact-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Ramani ya eneo la café -->
+        <div class="contact__map">
+          <iframe class="contact__map-frame" title="Ramani ya eneo la Mwambao Café, Dar es Salaam" data-i18n-title="contact.map_title" src="https://maps.google.com/maps?q=Coco%20Beach%20Dar%20es%20Salaam&amp;output=embed" width="600" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="contact__map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Coco+Beach+Dar+es+Salaam" target="_blank" rel="noopener noreferrer" data-i18n="contact.map_link">Fungua kwenye Google Maps</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer goes here in a next step -->
+  <!-- Sehemu ya chini ya tovuti (Footer) -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="#home">Mwambao <span>Café</span></a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Ladha ya pwani, kikombe kimoja kwa wakati.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Viungo vya chini" data-i18n-aria="footer.nav_aria">
+        <ul class="footer__list">
+          <li><a href="#menu" data-i18n="nav.menu">Menyu</a></li>
+          <li><a href="#about" data-i18n="nav.about">Kuhusu Sisi</a></li>
+          <li><a href="#reviews" data-i18n="nav.reviews">Maoni</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Wasiliana</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <p><a href="tel:+255624964064">+255 624 964 064</a></p>
+        <p><a href="https://wa.me/255624964064?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer" data-i18n="footer.whatsapp" data-i18n-wa="wa.greeting">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2026 Mwambao Café. <span data-i18n="footer.rights">Haki zote zimehifadhiwa.</span></p>
+      <p class="footer__credits"><span data-i18n="footer.photo_by">Picha:</span> <a href="https://www.pexels.com/photo/a-cup-of-cappuccino-on-a-table-14137302/" target="_blank" rel="noopener noreferrer">Matthis Volquardsen</a> <span data-i18n="footer.on">kwenye</span> <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a></p>
+      <p class="footer__built"><span data-i18n="footer.built_by">Imetengenezwa na</span> <a href="https://github.com/Zabepro" target="_blank" rel="noopener noreferrer">Zabepro</a></p>
+    </div>
+  </footer>
 
   <!-- Kitufe cha oda kinachoelea -->
   <button class="cart-fab" type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart">
