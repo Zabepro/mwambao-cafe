@@ -11,27 +11,38 @@
 </head>
 <body>
   <!-- Kiungo cha kuruka moja kwa moja kwenye maudhui makuu (Accessibility) -->
-  <a class="skip-link" href="#main">Ruka kwenda kwenye maudhui</a>
+  <a class="skip-link" href="#main" data-i18n="skip.link">Ruka kwenda kwenye maudhui</a>
 
   <!-- Sehemu ya kichwa cha tovuti na menyu ya urambazaji -->
   <header class="site-header">
-    <nav class="navbar" aria-label="Menyu kuu">
+    <nav class="navbar" aria-label="Menyu kuu" data-i18n-aria="nav.aria">
       <a class="logo" href="#home">Mwambao <span>Café</span></a>
 
-      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Fungua menyu">
+      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Fungua menyu" data-i18n-aria="nav.toggle">
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
         <span class="nav-toggle__bar"></span>
       </button>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#menu">Menyu</a></li>
-        <li><a href="#about">Kuhusu Sisi</a></li>
-        <li><a href="#reviews">Maoni</a></li>
-        <li><a href="#contact">Wasiliana</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Menyu</a></li>
+        <li><a href="#about" data-i18n="nav.about">Kuhusu Sisi</a></li>
+        <li><a href="#reviews" data-i18n="nav.reviews">Maoni</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Wasiliana</a></li>
       </ul>
 
-      <a class="btn btn-primary nav-order" href="https://wa.me/255700000000?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer">Agiza</a>
+      <!-- Vitufe vya kubadili lugha, mandhari na kitufe cha kuagiza -->
+      <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="Badili lugha kuwa Kiingereza" data-i18n-aria="lang.toggle">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <span class="lang-toggle__label" data-lang-label>EN</span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Badili hali ya mwonekano: mchana au usiku" aria-pressed="false" data-i18n-aria="theme.toggle">
+          <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a class="btn btn-primary nav-order" href="https://wa.me/255624964064?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer" data-i18n="nav.order" data-i18n-wa="wa.greeting">Agiza</a>
+      </div>
     </nav>
   </header>
 
@@ -40,17 +51,17 @@
     <!-- Sehemu ya ufunguzi na utambulisho (Hero Section) -->
     <section class="hero" id="home">
       <div class="hero__content">
-        <p class="hero__eyebrow">Dar es Salaam · Pwani</p>
-        <h1 class="hero__title">Ladha ya Pwani, Kikombe Kimoja Kwa Wakati</h1>
-        <p class="hero__text">Kahawa iliyopikwa kwa upendo, chai ya masala, kifungua kinywa cha Kiswahili na vitamu vya kila siku, kando ya bahari ya Hindi.</p>
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Dar es Salaam · Pwani</p>
+        <h1 class="hero__title" data-i18n="hero.title">Ladha ya Pwani, Kikombe Kimoja Kwa Wakati</h1>
+        <p class="hero__text" data-i18n="hero.text">Kahawa iliyopikwa kwa upendo, chai ya masala, kifungua kinywa cha Kiswahili na vitamu vya kila siku, kando ya bahari ya Hindi.</p>
         <div class="hero__actions">
-          <a class="btn btn-primary" href="#menu">Tazama Menyu</a>
-          <a class="btn btn-secondary" href="https://wa.me/255700000000?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer">Agiza kwa WhatsApp</a>
+          <a class="btn btn-primary" href="#menu" data-i18n="hero.cta_menu">Tazama Menyu</a>
+          <a class="btn btn-secondary" href="https://wa.me/255624964064?text=Habari%20Mwambao%20Caf%C3%A9%2C%20nataka%20kuagiza." target="_blank" rel="noopener noreferrer" data-i18n="hero.cta_order" data-i18n-wa="wa.greeting">Agiza kwa WhatsApp</a>
         </div>
       </div>
 
       <div class="hero__media">
-        <img src="images/hero.jpg" alt="Kikombe cha kahawa na chai ya masala mezani kando ya dirisha la pwani" width="800" height="600" fetchpriority="high">
+        <img src="images/hero.jpg" alt="Kikombe cha kahawa mezani kando ya ufukwe na bahari tulivu ya buluu" width="1920" height="1280" fetchpriority="high" data-i18n-alt="hero.alt">
       </div>
     </section>
 
